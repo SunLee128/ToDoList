@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var helpers = require('../helpers/todos')
+const favicon = require('express-favicon');
+const app = express();
+app.use(favicon(__dirname + '/public/favicon.png'));
 
 router.route('/')
 .get(helpers.getTodos)
